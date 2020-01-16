@@ -1,6 +1,6 @@
-function logger(request, response, next) {
-    const { method, originalURL } = request;
-    console.log(`[${new Date().toISOString()}] ${method} to ${originalURL}`);
+function logger(req, res, next) {
+    const {method, originalUrl} = req;
+    console.log(`[${new Date().toISOString()}] ${method} to ${originalUrl}`);
     next();
 }
 

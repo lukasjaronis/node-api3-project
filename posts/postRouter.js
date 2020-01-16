@@ -22,7 +22,7 @@ router.delete('/:id', validatePostId, (req, res) => {
   // do your magic!
   Posts.remove(req.params.id)
   .then(post => res.status(204).json(post))
-  .catch(err => res.status(500).json({error: `Um, something happened while trying to remove the post. ${err}`}))
+  .catch(err => res.status(500).json({error: `Something happened while trying to remove the post. ${err}`}))
 });
 
 router.put('/:id', validatePostId, (req, res) => {
